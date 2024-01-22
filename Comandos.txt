@@ -1,0 +1,28 @@
+--------- XML-----------------
+GET -> http://localhost:8080/RestM/resources/users/getUsersXml
+GET -> http://localhost:8080/RestM/resources/users/getUsersByIdJson/{id}
+GET -> http://localhost:8080/RestM/resources/users/getUsersByYearJson/{yearB}
+POST -> http://localhost:8080/RestM/resources/users/createXML
+<?xml version='1.0' encoding='utf-8'?>
+<users>
+<user>
+<name>Raul</name>
+<rol>Alumno</rol>
+<yearB>2001</yearB>
+</user>
+</users>
+
+
+-------- JSON--------------
+GET -> http://localhost:8080/RestM/resources/users/getUsersJson
+GET -> http://localhost:8080/RestM/resources/users/getUsersByIdJson/{id}
+GET -> http://localhost:8080/RestM/resources/users/getUsersByYearJson/{yearB}
+POST -> http://localhost:8080/RestM/resources/users/createJSON
+[
+    {
+       
+        "name": "Jacqueline",
+        "rol": "Alumno",
+        "yearB": 1991
+    }
+]

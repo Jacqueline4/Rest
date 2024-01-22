@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface UserDAO {
 
-    boolean inserUser(User u);
+    boolean insertUser(User u);
 
     List<User> getAllUsers();
 
@@ -20,8 +20,4 @@ public interface UserDAO {
 
     public List<User> getUsersById(int id);
 
-//    void deleteUser(User u);
-//
-//    void updateUser(User u);
-//    List<User> getUserByName(String name);
 }

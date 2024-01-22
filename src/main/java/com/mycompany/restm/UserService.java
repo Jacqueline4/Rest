@@ -30,39 +30,6 @@ public class UserService {
         return l;
     }
 
-    @GET
-    @Path("/getUsersByIdXml/{id}")
-    @Produces(MediaType.APPLICATION_XML)
-    public List<User> getUsersById(@PathParam("id") int userId) {
-        UserController uc = new UserController();
-        List<User> l = uc.getUsersById(userId);
-        return l;
-    }
-
-    @GET
-    @Path("/getUsersByYearXml/{yearB}")
-    @Produces(MediaType.APPLICATION_XML)
-    public List<User> getUsersByYear(@PathParam("yearB") int yearB) {
-        UserController uc = new UserController();
-        List<User> l = uc.getUsersByYear(yearB);
-        return l;
-    }
-
-//    @POST
-//    @Consumes("resources/users")
-//    public Response crearUser(@FormParam("user")User user, 
-//            @FormParam("id")int id, @FormParam("name") String name,
-//            @FormParam("rol") String rol, @FormParam("yearBirth") int yearBirth) {
-//        //insert into User values(1, "Alex", "Eljefe", 1993);
-//
-//        return null;
-//    }
-//    @POST
-//    @Consumes("resources/users")
-//    public void crearUser(User u) {
-//        
-//
-//    }
     @POST
     @Path("/createXML")
     @Produces(MediaType.APPLICATION_XML)
@@ -71,7 +38,7 @@ public class UserService {
         List<User> r = new ArrayList<>();
         try (UserController uc = new UserController()) {
             for (User user : lu) {
-                if (uc.inserUser(user)) {
+                if (uc.insertUser(user)) {
                     r.add(user);
                 }
             }
@@ -89,7 +56,7 @@ public class UserService {
         List<User> r = new ArrayList<>();
         try (UserController uc = new UserController()) {
             for (User user : lu) {
-                if (uc.inserUser(user)) {
+                if (uc.insertUser(user)) {
                     r.add(user);
                 }
             }
